@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Tickets.Data.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace E_Tickets.Models
 {
-    public class Cinema
+    public class Cinema : IEntityBase
     {
         public int Id { get; set; }
 

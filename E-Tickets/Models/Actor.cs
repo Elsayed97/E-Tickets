@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using E_Tickets.Data.Base;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace E_Tickets.Models
 {
-    public class Actor
+    public class Actor : IEntityBase
     {
         [Key] //Optional
         public int Id { get; set; }
