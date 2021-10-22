@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using E_Tickets.Data.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace E_Tickets.Data
     { 
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            
+
+            services.AddScoped<IActorsService, ActorsService>();
             return services;
         }
     }

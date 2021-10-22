@@ -320,6 +320,6 @@ namespace E_Tickets.Data
                 }
             }
         }
-      
+
     }
 }

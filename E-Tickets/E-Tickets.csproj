@@ -14,6 +14,14 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\Actors\" />
+    <Folder Include="wwwroot\Images\Cinemas\" />
+    <Folder Include="wwwroot\Images\Movies\" />
+    <Folder Include="wwwroot\Images\Producers\" />
   </ItemGroup>
 
 </Project>
