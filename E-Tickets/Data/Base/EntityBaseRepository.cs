@@ -42,7 +42,7 @@ namespace E_Tickets.Data.Base
             return result;
         }
 
-        public async Task UpdateAsync(int id, T entity)
+        public async Task UpdateAsync(T entity)
         {
             EntityEntry entityEntry =  context.Entry<T>(entity);
             entityEntry.State =  EntityState.Modified;

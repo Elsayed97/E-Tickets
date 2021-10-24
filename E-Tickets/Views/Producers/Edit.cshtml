@@ -11,6 +11,8 @@
             <div class="col-md-8 offset-2">
                 <form asp-action="Edit" asp-controller="Producers">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    
+                    <input type="hidden" asp-for="Id" />
 
                     <div class="form-group text-center">
                         <img id="ProfilePicturePreview" class="border-info rounded-circle" style="max-width: 150px" />

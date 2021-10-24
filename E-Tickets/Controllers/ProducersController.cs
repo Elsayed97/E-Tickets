@@ -56,11 +56,11 @@ namespace E_Tickets.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int Id, [Bind("Id,ProfilePictureUrl,FullName,Bio")] Producer producer)
+        public async Task<IActionResult> Edit([Bind("Id,ProfilePictureUrl,FullName,Bio")] Producer producer)
         {
             if (ModelState.IsValid)
             {
-                await service.UpdateAsync(Id, producer);
+                await service.UpdateAsync(producer);
                 return RedirectToAction("Index");
             }
             return View(producer);

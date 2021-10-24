@@ -10,7 +10,7 @@ namespace E_Tickets.Data.Base
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
         Task CreateAsync(T entity);
-        Task UpdateAsync(int id, T entity);
+        Task UpdateAsync(T entity);
         Task DeleteAsync(int id);
     }
 }
