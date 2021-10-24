@@ -1,4 +1,5 @@
-﻿using E_Tickets.Data.Services;
+﻿using E_Tickets.Data.Base;
+using E_Tickets.Data.Services;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace E_Tickets.Data
         {
 
             services.AddScoped<IActorsService, ActorsService>();
+            services.AddScoped<IProducersService, ProducersService>();
             return services;
         }
     }
