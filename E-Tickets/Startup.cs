@@ -25,12 +25,20 @@ namespace E_Tickets
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            // Database Configuration
             services.AddDbContext<AppDbContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString"));
             });
+
             // this method for registering Aplication Services
             services.AddApplicationServices();
+
+            // AutoMapper Configuration
+            services.AddAutoMapper(typeof(Startup));
+
+
             services.AddControllersWithViews();
         }
 

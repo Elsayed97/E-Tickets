@@ -12,9 +12,11 @@ namespace E_Tickets.Data
     { 
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-
+            // Services Configuration
             services.AddScoped<IActorsService, ActorsService>();
             services.AddScoped<IProducersService, ProducersService>();
+            services.AddScoped<ICinemasService, CinemasService>();
+            services.AddScoped<IMoviesService, MoviesService>();
             return services;
         }
     }
