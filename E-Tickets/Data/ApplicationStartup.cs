@@ -17,6 +17,7 @@ namespace E_Tickets.Data
             services.AddScoped<IProducersService, ProducersService>();
             services.AddScoped<ICinemasService, CinemasService>();
             services.AddScoped<IMoviesService, MoviesService>();
+            services.AddScoped<IOrderService, OrderService>();
             return services;
         }
     }

@@ -97,8 +97,9 @@ namespace E_Tickets.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                var filteredMovies = allMovies.Where(m => m.Name.ToLower().Contains(searchString)
-                                                    || m.Description.ToLower().Contains(searchString)).ToList();
+                var searchLower = searchString.ToLower();
+                var filteredMovies = allMovies.Where(m => m.Name.ToLower().Contains(searchLower)
+                                                    || m.Description.ToLower().Contains(searchLower)).ToList();
                 return View("Index", filteredMovies);
             }
             return View("Index",allMovies);

@@ -1,6 +1,8 @@
 using E_Tickets.Data;
+using E_Tickets.Data.Cart;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -38,6 +40,10 @@ namespace E_Tickets
             // AutoMapper Configuration
             services.AddAutoMapper(typeof(Startup));
 
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sc => ShoopingCart.GetShoopingCart(sc));
+            services.AddSession();
+
 
             services.AddControllersWithViews();
         }
@@ -57,6 +63,8 @@ namespace E_Tickets
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
